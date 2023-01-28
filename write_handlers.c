@@ -62,7 +62,7 @@ int write_number(int is_negative, int ind, char buffer[],
 {
 	int length = BUFF_SIZE - ind - 1;
 	char padd = ' ', extra_ch = 0;
-	
+
 	UNUSED(size);
 
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
@@ -179,7 +179,7 @@ int write_unsgnd(int is_negative, int ind,
 	{
 		for (i = 0; i < width - length; i++)
 			buffer[i] = padd;
-		
+
 		buffer[i] = '\0';
 
 		if (flags & F_MINUS) /* Asign extra char to left of buffer [buffer>padd]*/
